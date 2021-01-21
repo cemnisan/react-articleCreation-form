@@ -1,0 +1,84 @@
+{
+  "articles": [
+    {
+      "title": "JOKERİN İNCELEMESİ",
+      "content": "Makale yazmak güzeldir, çünkü neden yazmayalım? her neyse, yapıştır lorem ipsum'u.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "author": "Raziye Özenli",
+      "image": "https://picsum.photos/400/300",
+      "video": "https://www.youtube.com/watch?v=73nbNQ6w9c8",
+      "id": 1
+    },
+    {
+      "title": "JOKERİN İNCELEMESİ",
+      "content": "Lorem.",
+      "author": "Raziye Özenli",
+      "image": "https://picsum.photos/400/300",
+      "video": "https://www.youtube.com/watch?v=73nbNQ6w9c8",
+      "id": 2
+    },
+    {
+      "title": "cem",
+      "content": "cem",
+      "author": "cem",
+      "image": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "video": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "id": 3
+    },
+    {
+      "title": "cem",
+      "content": "cem",
+      "author": "cem",
+      "image": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "video": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "id": 4
+    },
+    {
+      "title": "cem",
+      "content": "cem",
+      "author": "cem",
+      "image": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "video": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "id": 5
+    },
+    {
+      "title": "cem",
+      "content": "cem",
+      "author": "cem",
+      "image": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "video": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "id": 6
+    },
+    {
+      "title": "cem",
+      "content": "cem",
+      "author": "cem",
+      "image": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "video": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "id": 7
+    },
+    {
+      "title": "cem",
+      "content": "cem",
+      "author": "cem",
+      "image": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "video": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "id": 8
+    },
+    {
+      "title": "cem",
+      "content": "c",
+      "author": "cem",
+      "image": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "video": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "id": 9
+    },
+    {
+      "title": "c",
+      "content": "c",
+      "author": "Raziye Özenli",
+      "image": "https://github.com/cemnisan/kodluyoruz-form-contact-task/blob/main/src/components/Form/Form.jsx",
+      "video": "https://www.youtube.com/watch?v=73nbNQ6w9c8",
+      "id": 10
+    }
+  ]
+}

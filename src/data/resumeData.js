@@ -7,7 +7,8 @@ let resumeData = {
             "type":"text",
             "placeholder":"Title",
             "as":"input",
-            "rows":"3"
+            "rows":"3",
+            "name":"title"
         },
         {
             "controlId":"formAuthor",
@@ -15,7 +16,8 @@ let resumeData = {
             "type":"text",
             "placeholder":"Author",
             "as":"input",
-            "rows":"3"
+            "rows":"3",
+            "name":"author"
         },
         {
             "controlId":"formImage",
@@ -23,7 +25,8 @@ let resumeData = {
             "type":"url",
             "placeholder":"Lorem Picsum Image",
             "as":"input",
-            "rows":"3"
+            "rows":"3",
+            "name":"image"
         },
         {
             "controlId":"formVideo",
@@ -31,7 +34,8 @@ let resumeData = {
             "type":"url",
             "placeholder":"Video Links",
             "as":"input",
-            "rows":"3"
+            "rows":"3",
+            "name":"video"
         },
         {
             "controlId":"formContent",
@@ -39,7 +43,8 @@ let resumeData = {
             "type":"text",
             "placeholder":"Content",
             "as":"textarea",
-            "rows":"3"
+            "rows":"3",
+            "name":"content"
         },
         
     ]

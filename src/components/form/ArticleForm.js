@@ -1,26 +1,80 @@
-import React from 'react';
+import React,{Component} from 'react';
 import {Form,Button} from 'react-bootstrap';
+import axios from 'axios';
+import {ArticleConsumer} from '../../data/context';
 
-function ArticleForm(props){
-    let resumeData= props.resumeData;
-    return(
-        <Form className="container">
-            {
-                resumeData.articleForm.map(item=>{
-                    let {controlId,label,type,placeholder,as,rows} = item;
-                    return (
-                        <Form.Group controlId={controlId}>
-                            <Form.Label className="mt-3">{label}</Form.Label>
-                            <Form.Control type={type} placeholder={placeholder} as={as} rows={rows} />
-                        </Form.Group>
-                    )
-                })
+class ArticleForm extends Component{
+    state = {
+        title:"",
+        content:"",
+        author:"",
+        image:"",
+        video:""
+    }
+
+    nameChange = (e) =>{
+        this.setState({
+            [e.target.name]:e.target.value
+        })
+    }
+
+    addArticle = async(dispatch,e) =>{
+        const {title,content,author,image,video} = this.state;
+
+        const newUser = {
+            title:title,
+            content:content,
+            author:author,
+            image:image,
+            video:video
             }
-            <Button variant="primary" type="submit" className="mt-2">
-                Submit
-            </Button>
-        </Form>
-    )
+
+        const response = await axios.post('http://localhost:3000/articles',newUser)
+        dispatch({type:"ADD_USER",payload:response.data})
+        
+        
+        
+    }
+
+   render(){
+        let resumeData= this.props.resumeData;
+        
+        return(
+            <ArticleConsumer>
+                {
+                    value=>{
+                        const {dispatch} = value;
+                        return (
+                            <Form onSubmit={this.addArticle.bind(this,dispatch)} className="container">
+                                {
+                                    resumeData.articleForm.map(item=>{
+                                        let {controlId,label,type,placeholder,as,rows,name} = item;
+                                        return (
+                                            <Form.Group key={controlId} controlId={controlId}>
+                                                <Form.Label className="mt-3">{label}</Form.Label>
+                                                <Form.Control 
+                                                type={type} 
+                                                placeholder={placeholder} 
+                                                as={as} 
+                                                rows={rows} 
+                                                onChange={this.nameChange}
+                                                name={name}
+                                                
+                                                />
+                                            </Form.Group>
+                                        )
+                                    })
+                                }
+                                <Button variant="primary" type="submit" className="mt-2">
+                                    Submit
+                                </Button>
+                            </Form>
+                        )
+                    }
+                }
+            </ArticleConsumer>
+        )
+    }
 }
 
 export default ArticleForm;
