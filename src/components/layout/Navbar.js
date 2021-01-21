@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Navbar(props){
     let resumeData= props.resumeData
@@ -15,7 +16,7 @@ function Navbar(props){
                             resumeData.navbar.map(item=>{
                                 return(
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="/">{item}</a>
+                                        <Link class="nav-link" to={item.toLowerCase()}>{item}</Link>
                                     </li>
                                 )
                             })
