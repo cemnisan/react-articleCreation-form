@@ -1,7 +1,7 @@
 import React from 'react';
-import resumeData from '../../data/resumeData';
 
 function Navbar(props){
+    let resumeData= props.resumeData
     return(
         <div className="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
