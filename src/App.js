@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/layout/Navbar';
 import Articles from './components/articles/Articles';
 import ArticleForm from './components/form/ArticleForm';
+import UpdateForm from './components/form/UpdateArticle';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 
 
@@ -19,6 +20,14 @@ function App() {
             <ArticleForm resumeData ={resumeData} />
           </Route>
           
+          <Route exact
+           path="/edit/:id"
+           render={props=>(
+           <UpdateForm {...props} resumeData={resumeData}/>
+          )}>
+            
+          </Route>
+
         </Switch>
     </Router>
   );

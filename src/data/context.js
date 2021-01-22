@@ -5,15 +5,20 @@ const ArticleContext = React.createContext()
 
 const reducer = (state,action) =>{
     switch(action.type){
-        case("ADD_USER"):
+        case("ADD_ARTICLE"):
             return{
                 ...state,
                 articles:[...state.articles,action.payload]
             }
-        case("DELETE_USER"):
+        case("DELETE_ARTICLE"):
             return{
                 ...state,
                 articles:state.articles.filter(article => article.id !== action.payload)
+            }
+        case("UPDATE_ARTICLE"):
+            return{
+                ...state,
+                articles:state.articles.map(article => article.id === action.payload.id ? action.payload : article)
             }
 
         default:

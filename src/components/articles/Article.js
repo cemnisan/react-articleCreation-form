@@ -1,19 +1,22 @@
 import React,{Component} from 'react';
 import {ArticleConsumer} from '../../data/context';
-import {Accordion,Card,Button} from 'react-bootstrap';
+import {Accordion,Card,Button,Container} from 'react-bootstrap';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class Article extends Component{
 
     deleteArticle = async(dispatch,e) =>{
         const {id} = this.props
         await axios.delete(`http://localhost:3000/articles/${id}`)
-        dispatch({type:"DELETE_USER",payload:id})
+        dispatch({type:"DELETE_ARTICLE",payload:id})
+        this.props.history.push("/")
     }
 
 
     render(){
-        const {author,content,image,title,video} = this.props
+        const {author,content,image,title,video,id} = this.props
         return(
             <ArticleConsumer>
                 {
@@ -28,7 +31,7 @@ class Article extends Component{
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey="0">
                                         <Card.Body>
-                                        <div className="container">
+                                        <Container>
                                                 <div className="article">
                                                     <div className="title">
                                                         <h1>{title}</h1>
@@ -46,8 +49,9 @@ class Article extends Component{
                                                         <p>{content}</p>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </Container>
                                             <Button onClick={this.deleteArticle.bind(this,dispatch)} type="submit" className="btn btn-primary px-4 mx-2">Sil</Button>
+                                            <Link to={`/edit/${id}`}><Button className="btn btn-primary">Düzenle</Button></Link>
                                         </Card.Body>
                                     </Accordion.Collapse>
                                 </Card>
@@ -60,4 +64,4 @@ class Article extends Component{
     }
 }
 
-export default Article;
+export default withRouter(Article);
