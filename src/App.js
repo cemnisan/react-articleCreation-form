@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/layout/Navbar';
-import Article from './components/articles/Article';
+import Articles from './components/articles/Articles';
 import ArticleForm from './components/form/ArticleForm';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 
@@ -13,7 +13,7 @@ function App() {
       <Navbar resumeData={resumeData} />
         <Switch>
 
-          <Route exact path="/blog" component={Article} />
+          <Route exact path="/blog" component={Articles} />
 
           <Route exact path="/addarticle">
             <ArticleForm resumeData ={resumeData} />

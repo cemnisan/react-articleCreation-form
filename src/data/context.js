@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import axios from 'axios';
 
 const ArticleContext = React.createContext()
 
@@ -20,6 +21,15 @@ export class ArticleProvider extends Component{
         dispatch: action=>{
             this.setState(state=> reducer(state,action))
         }
+    }
+    
+    componentDidMount= async () =>{
+        const response = await axios("http://localhost:3000/articles")
+        
+        this.setState({
+            articles:response.data
+        })
+       
     }
     render(){
         return(
