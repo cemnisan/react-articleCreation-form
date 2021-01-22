@@ -10,6 +10,12 @@ const reducer = (state,action) =>{
                 ...state,
                 articles:[...state.articles,action.payload]
             }
+        case("DELETE_USER"):
+            return{
+                ...state,
+                articles:state.articles.filter(article => article.id !== action.payload)
+            }
+
         default:
             return state
     }
