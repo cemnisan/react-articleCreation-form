@@ -5,6 +5,8 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
+let slugify = require('slugify')
+
 class Article extends Component{
 
     deleteArticle = async(dispatch,e) =>{
@@ -34,7 +36,10 @@ class Article extends Component{
                                         <Container>
                                                 <div className="article">
                                                     <div className="title">
-                                                        <h1>{title}</h1>
+                                                        <Link to={`detail/${id}/${slugify(title,{lower:true})}`}>
+                                                            <h1>{title}</h1>
+                                                        </Link>
+
                                                         <h5>{author}</h5>
                                                     </div>
                                                     <div className="image mt-3">
@@ -51,7 +56,7 @@ class Article extends Component{
                                                 </div>
                                             </Container>
                                             <Button onClick={this.deleteArticle.bind(this,dispatch)} type="submit" className="btn btn-primary px-4 mx-2">Sil</Button>
-                                            <Link to={`/edit/${id}`}><Button className="btn btn-primary">Düzenle</Button></Link>
+                                            <Link to={`edit/${id}`}><Button className="btn btn-primary">Düzenle</Button></Link>
                                         </Card.Body>
                                     </Accordion.Collapse>
                                 </Card>

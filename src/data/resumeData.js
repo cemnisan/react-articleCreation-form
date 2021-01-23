@@ -1,5 +1,18 @@
 let resumeData = {
-    "navbar":["Home","Blog","AddArticle"],
+    "navbar":[
+        {
+            "slug":"",
+            "item":"Home"
+        },
+        {
+            "slug":"blog",
+            "item":"Blog"
+        },
+        {
+            "slug":"addArticle",
+            "item":"Add Article"
+        },
+    ],
     "articleForm":[
         {
             "controlId":"formTitle",

@@ -11,7 +11,6 @@ class ArticleForm extends Component{
         author:"",
         image:"",
         video:"",
-        isTrue:true
     }
 
     nameChange = (e) =>{
@@ -81,3 +80,4 @@ class ArticleForm extends Component{
 }
 
 export default withRouter(ArticleForm);
+

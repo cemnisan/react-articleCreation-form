@@ -75,7 +75,7 @@ class UpdateArticle extends Component{
                                                 placeholder={placeholder} 
                                                 as={as} 
                                                 rows={rows}
-                                               
+                                                value={this.state.title}
                                                 onChange={this.nameInput}
                                                 name={name} 
                                                 />

@@ -13,10 +13,11 @@ function Navbar(props){
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         {
-                            resumeData.navbar.map(item=>{
+                            resumeData.navbar.map(items=>{
+                                const {slug,item} = items
                                 return(
                                     <li className="nav-item active" key={item}>
-                                        <Link className="nav-link" to={item.toLowerCase()}>{item}</Link>
+                                        <Link className="nav-link" to={`/${slug}`}>{item}</Link>
                                     </li>
                                 )
                             })

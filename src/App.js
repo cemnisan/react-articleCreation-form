@@ -3,6 +3,7 @@ import Navbar from './components/layout/Navbar';
 import Articles from './components/articles/Articles';
 import ArticleForm from './components/form/ArticleForm';
 import UpdateForm from './components/form/UpdateArticle';
+import ArticlesDetail from './components/detail/ArticlesDetail';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 
 
@@ -16,8 +17,9 @@ function App() {
 
           <Route exact path="/blog" component={Articles} />
 
-          <Route exact path="/addarticle">
+          <Route exact path="/addArticle">
             <ArticleForm resumeData ={resumeData} />
+            
           </Route>
           
           <Route exact
@@ -25,7 +27,14 @@ function App() {
            render={props=>(
            <UpdateForm {...props} resumeData={resumeData}/>
           )}>
-            
+          </Route>
+
+          <Route exact 
+          path="/detail/:id/:slug"
+          render={props =>(
+            <ArticlesDetail {...props} />
+          )}>
+
           </Route>
 
         </Switch>
