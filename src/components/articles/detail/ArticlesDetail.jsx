@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import {ArticleConsumer} from '../../data/context';
-import ArticleDetails from './ArticleDetails';
+import {ArticleConsumer} from '../../../data/context';
+import ArticleDetails from '../detail/ArticleDetails';
+
 
 class ArticlesDetail extends Component {
   render() {
     const {id} = this.props.match.params
-    console.log(id)
+
     return (
       <ArticleConsumer>
+        
         {
           value =>{
             const {articles} = value;

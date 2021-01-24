@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {Form,Button} from 'react-bootstrap';
 import axios from 'axios';
-import {ArticleConsumer} from '../../data/context';
+import {ArticleConsumer} from '../../../data/context';
 import { withRouter } from 'react-router-dom';
 
 class ArticleForm extends Component{
